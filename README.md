@@ -33,7 +33,7 @@
 特に、仮想的な実験データの数値解析を行うことで、実践的能力を養う。
 
 ### 対話型数値計算
-[Notebook](notebooks/Programming_jissen.ipnb)
+[Notebook](notebooks/Programming_jissen.ipynb)
 (５回)
 
 対話型に実行することが可能なプログラミング言語Pythonを用いて、PC内での数値計算の原理について実感する。
