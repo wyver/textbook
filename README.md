@@ -33,6 +33,7 @@
 特に、仮想的な実験データの数値解析を行うことで、実践的能力を養う。
 
 ### 対話型数値計算
+[Notebook](tree/master/notebooks/Programming_jissen.ipnb)
 (５回)
 
 対話型に実行することが可能なプログラミング言語Pythonを用いて、PC内での数値計算の原理について実感する。
@@ -40,7 +41,6 @@
 特に、近年のデータ解析・数値計算に広く用いられているJupyter-notebookを用いる。
 
 #### 型の概念、変数への値の代入・読み取り、関数の実行
-[Notebook](notebooks/Programming_jissen.ipnb)
 
 <!---　リスト・アレイを紹介する。繰り返し処理の必要さを述べる　-->
 #### 繰り返し処理、条件分岐
