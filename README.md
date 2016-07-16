@@ -32,6 +32,8 @@
 
 特に、仮想的な実験データの数値解析を行うことで、実践的能力を養う。
 
+[参考](http://www.scipy-lectures.org/)
+
 ### 対話型数値計算
 [Notebook](notebooks/Programming_jissen.ipynb)
 (５回)
