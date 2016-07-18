@@ -1,6 +1,6 @@
 # textbook
 
-[京都大学工学部　１回生前期　情報基礎演習（工学部）のテキスト](raw/fujii/main.pdf)
+[京都大学工学部　１回生前期　情報基礎演習（工学部）のテキスト](https://github.com/Johokiso-enshu/textbook/raw/master/main.pdf)
 
 # 授業の目的
 パーソナルコンピュータを物理工学学習の道具として使いこなせるよう、コンピュータリテラシーを育成する。
