@@ -1,6 +1,6 @@
 # textbook
 
-京都大学工学部　１回生前期　情報基礎演習（工学部）のテキスト
+[京都大学工学部　１回生前期　情報基礎演習（工学部）のテキスト](https://github.com/Johokiso-enshu/textbook/raw/master/main.pdf)
 
 # 授業の目的
 パーソナルコンピュータを物理工学学習の道具として使いこなせるよう、コンピュータリテラシーを育成する。
@@ -31,6 +31,8 @@
 この章では、今後の実験データ解析や、＊＊＊など数値計算を行うために必要な、プログラミング言語Pythonの使用法について学ぶ。
 
 特に、仮想的な実験データの数値解析を行うことで、実践的能力を養う。
+
+[参考](http://www.scipy-lectures.org/)
 
 ### 対話型数値計算
 [Notebook](notebooks/Programming_jissen.ipynb)
