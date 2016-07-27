@@ -1,0 +1,139 @@
+\chapter{Python入門}
+
+この章では、プログラミング言語の一つであるPythonの基本的な使い方を学ぶ。
+プログラミングスキルを上達させるコツは、たくさんのコードを書くことである。
+以下に示すコードは全てJupyter-notebookで実行させること。
+
+
+
+
+
+\section{\ref{sec:jupyter_example}章の内容の学習}
+
+この章では、前章\ref{sec:jupyter_example}で入力した内容について学ぶ。
+それを通して、前回とは異なるデータに対して同様の処理を行えるよう、プログラミングの基礎を学ぶ。
+
+%TODO
+
+
+\section{プログラミングの基礎}
+
+\subsection{変数の型\label{subsec:type}}
+
+プログラミング基礎知識の中で最も重要な概念が「変数の型」である。
+
+「型」は変数の役割を区別するものである。
+
+Pythonにデフォルトで用意されている型には以下のようなものがある。
+\begin{itemize}
+	\item {\ttfamily int} 整数を表す。
+	\item {\ttfamily float}　実数を表す。
+	\item {\ttfamily bool}　真・偽の２値を表す。
+	\item {\ttfamily str}　文字列を表す。
+	\item {\ttfamily list, dict, tuple}　複数の要素から成る変数の組を表す。
+\end{itemize}
+
+これらの役割はおいおい明らかになるとして、
+まずはいろいろな変数の型を調べてみよう。
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+{\bfseries　課題\ref{subsec:type}}
+
+\noindent
+カッコの中の変数（引数：ひきすう　と言う）の型を返す関数である{\ttfamily type()}関数を用いた以下の命令を実行せよ。
+なお、ここでは、{\ttfamily print()}関数の引数に{\ttfamily type()}関数の値を代入することで、その結果を画面に表示している。
+
+
+\begin{itemize}
+	{\ttfamily 
+		\item value\_float = 1.0
+
+		print(type(value\_float))
+
+		\item value\_str = 'Hello world'
+
+		print(type(value\_str))
+		
+		\item value\_list = [0.1, 0.2, 3.0]
+		
+		print(type(value\_list))
+	}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{int, float型\label{subsubsec:int-float}}
+{\ttfamily int, float}は、数を表す型である。
+int や float の例としては以下のような例がある。
+
+
+{\bfseries　課題\ref{subsubsec:int-float}}
+
+\noindent
+以下の命令について、その値および型を表示させるとともに、その意味を答えよ。
+必要であれば
+%TODO
+を参考にすること。
+
+なお、命令の意味については、実行セルの直下にMarkdownセルを作成して記入すること。
+\begin{comment}
+\begin{enumerate}
+	{\ttfamily 
+		\item a = 2.0\\
+			  b = 3.0 ** 2.0\\
+		
+		\item a = 5 \% 2\\
+		
+		\item a = 3 * 2.0 + 1.0\\
+	}
+\end{enumerate}
+content...
+\end{comment}
+
+
+\subsubsection{str型\label{subsubsec:str}}
+{\ttfamily str}は、文字列を表す型である。
+文字列は以下のように用いることができる。
+
+{\bfseries　課題\ref{subsubsec:str}}
+以下の命令を実行せよ。
+
+
+
+以下のような結果が
+\begin{itemize}
+	{\ttfamily \item float} ←　浮動小数点。実数を表す。
+	{\ttfamily \item int} ←　整数
+	{\ttfamily \item str} ←　文字列
+\end{itemize}
+
+なお、オブジェクト指向と呼ばれる現代的なプログラミング技法では、
+型の設計が開発の中心的役割を担う。
+
+オブジェクト指向プログラミングについては、本授業の最後に少し触れる。
+
+
+と表示されたはずである。
+なお、「←」の右側はそれぞれの意味を表す。
+
+次に、以下を実行せよ。
+
+\begin{itemize}
+	{\ttfamily 
+		\item d = [1.0, 2.0, 3.0]
+		
+		print(type(d))
+		
+		\item print(d[0], d[1], d[2])
+				
+		\item print(type(d[0]))
+		
+		print(type(c))
+	}
+\end{itemize}
+
+
+
+
+\subsection{}
