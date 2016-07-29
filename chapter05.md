@@ -15,17 +15,17 @@ Jupyte起動するためにコマンドプロンプトを実行する。
 `cmd`
 を入力しEnterを押す方法が簡単である。
 
-<img src=TeX_files/fig_python_install/Anaconda_launch1.png width=480pt>
+<img src=figs/fig_python_install/Anaconda_launch1.png width=480pt>
 
 起動させたコマンドプロンプトで
 `jupyter-notebook`
 を入力し実行するとJupyter-notebookのスタート画面が立ち上がる。
 
-<img src=TeX_files/fig_python_install/Anaconda_launch2.png width=480pt>
+<img src=figs/fig_python_install/Anaconda_launch2.png width=480pt>
 
 コマンドプロンプト内で「Jupyter-notebook」と入力し実行する。
 
-<img src=TeX_files/fig_python_install/Anaconda_launch3.png width=480pt>
+<img src=figs/fig_python_install/Anaconda_launch3.png width=480pt>
 
 Jupyter-notebookの起動画面の一例。
 
@@ -39,7 +39,7 @@ Jupyter-notebookの起動画面の一例。
 マイドキュメントフォルダをクリックしその中に移動したあと、NewボタンからFolderをクリックする。
 作成したフォルダの左側のチェックボックスをクリックすると出てくる renameボタンを押すことで名前の変更ができる。
 
-<img src=TeX_files/fig_python_install/Jupyter-launch1.png width=480pt>
+<img src=figs/fig_python_install/Jupyter-launch1.png width=480pt>
 
 Jupyter-notebookでフォルダ構造を整理する。フォルダ名左横のチェックボックスを押すと、`rename`ボタンが出る。
 
@@ -54,11 +54,11 @@ Johokiso-enshuフォルダ内に移動し、NewボタンからPython 3を起動�
 Jupyerロゴの横のUntitledをクリックすることで名を変更できる。
 今日はプログラミング1回目なので Programming1-start とする。
 
-<img src=TeX_files/fig_python_install/Jupyter_launch2.png width=480pt>
+<img src=figs/fig_python_install/Jupyter_launch2.png width=480pt>
 
 Jupyter-notebookで新しいPythonノートブックファイルを作成したときの様子。
 
-<img src=TeX_files/fig_python_install/Jupyter1.png width=480pt>
+<img src=figs/fig_python_install/Jupyter1.png width=480pt>
 
 Jupyter-notebookファイルの名前を変更する。
 
@@ -74,12 +74,12 @@ Jupyter-notebookファイルの名前を変更する。
 
 エラーなく実行される場合、`Hello world` とセルの下に表示されるはずである。
 
-<img src=TeX_files/figs_jupyter_start/helloworld.png width=480pt>
+<img src=figs/figs_jupyter_start/helloworld.png width=480pt>
 
 エラーがある場合は、以下のように、セルの下にエラーメッセージが表示される。
 このような場合は、再度正しいスクリプトを入力し、実行する。
 
-<img src=TeX_files/figs_jupyter_start/helloworld_error.png width=480pt>
+<img src=figs/figs_jupyter_start/helloworld_error.png width=480pt>
 
 コマンドを誤って入力した例。
 
@@ -88,7 +88,7 @@ Jupyter-notebookファイルの名前を変更する。
 
 
 次に、以下のように一連の命令を実行してみよう。
-<img src=TeX_files/figs_jupyter_start/python_start.png width=480pt>
+<img src=figs/figs_jupyter_start/python_start.png width=480pt>
 
 命令の内容は後で学ぶ。
 今は、コンピュータに命令をし、その命令が正しければコンピュータがそれを実行することがわかれば十分である。
@@ -100,7 +100,7 @@ Jupyter-notebookファイルの名前を変更する。
 Jupyter-notebookのセルには、Code, Markdown、Raw NBConvertの3状態がある。
 これは、画面上部メニューの`Cell`-> `Cell Type` から設定できる。
 
-<img src=TeX_files/figs_jupyter_start/cell_type.png width=480pt>
+<img src=figs/figs_jupyter_start/cell_type.png width=480pt>
 
 + Code状態は、上記のようなコンピュータへの命令を記入するためのもの、
 + Markdown状態は、命令以外の文章、特にコードの説明を記入するものである。
@@ -110,7 +110,7 @@ Markdown状態も、後でノートブックの内容を理解するために重
 
 Markdownセルを作成し、以下と同じ内容を記入して実行してみよ。
 
-<img src=TeX_files/figs_jupyter_start/markdown.png width=480pt>
+<img src=figs/figs_jupyter_start/markdown.png width=480pt>
 
 Markdownセルに入力している様子。
 

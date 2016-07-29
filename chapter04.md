@@ -17,7 +17,8 @@ Windowsにインストールする場合は、図\ref{fig:Anaconda_download}に�
 Pythonにはバージョン2系統のものと3系統のものがあるが、
 最新のものである3系統のもの（図ではPython3.5）をダウンロードすること。
 
-![Aanaconda_download](TeX_files/fig_python_install/Anaconda_download.png "サンプル")
+<img src=figs/fig_python_install/Anaconda_download.png width=480pt>
+
 Anacondaのダウンロードページの様子。Windows用のPython3.5のものをダウンロードすること。
 
 
@@ -29,18 +30,18 @@ Anacondaのダウンロードページの様子。Windows用のPython3.5のも�
 
 インストーラにはいくつか質問されるが、よくわからなければデフォルトのままでよい。
 
-<img src=TeX_files/fig_python_install/Anaconda_install.png width=400px>
+<img src=figs/fig_python_install/Anaconda_install.png width=400px>
 
 ダウンロードした場所をエクスプローラで開き、ファイルを実行する。
 
-<img src=TeX_files/fig_python_install/Anaconda_install2.png width=400px>
+<img src=figs/fig_python_install/Anaconda_install2.png width=400px>
 
 インストーラを実行した時の様子。
 
-<img src=TeX_files/fig_python_install/Anaconda_install3.png width=400px>
+<img src=figs/fig_python_install/Anaconda_install3.png width=400px>
 
 インストールには少し時間がかかる。
 
-<img src=TeX_files/fig_python_install/Anaconda_install5.png width=400px>
+<img src=figs/fig_python_install/Anaconda_install5.png width=400px>
 
 このような画面が出れば完成である。
