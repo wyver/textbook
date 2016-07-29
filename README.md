@@ -19,9 +19,9 @@
 
 ## PC操作の基本
 この章では今後の大学生活で必要な、
-+ [京都大学PC端末](chapter01.md)
-+ [電子メールサービスのKUMOI](chapter02.md)
-+ [ワープロソフトウェアであるMicrosoft Word](chapter03.md)
++ [京都大学PC端末](src/chapter01.md)
++ [電子メールサービスのKUMOI](src/chapter02.md)
++ [ワープロソフトウェアであるMicrosoft Word](src/chapter03.md)
 の使用法について学ぶ。
 
 
@@ -32,19 +32,19 @@
 プログラミング言語は *Python* を使用する。
 
 個人のPCを持ち込んで授業を受ける場合は、この回が始まるまでに予め開発環境をインストールしておくこと。
-インストールについては[こちら](chapter04.md)を参考にすること。
+インストールについては[こちら](src/chapter04.md)を参考にすること。
 
 
 ### 対話型数値計算
 この章では、数値計算を簡単に実行できる対話型環境 （Jupyter-notebook）を用いて数値計算に慣れることを目標とする。
 
-+ [Jupyter-notebookの基本的な使用方法](chapter05.md)
++ [Jupyter-notebookの基本的な使用方法](src/chapter05.md)
 
-+ [型・変数](chapter06.ipynb)
++ [型・変数](src/chapter06.ipynb)
 
-+ [繰り返し処理, numpyを用いた特殊関数の計算](chapter07.ipynb)
++ [繰り返し処理, numpyを用いた特殊関数の計算](src/chapter07.ipynb)
 
-+ [応用例ー実験ノートの作成ー](chapter08.ipynb)
++ [応用例ー実験ノートの作成ー](src/chapter08.ipynb)
 
 
 ### プログラミング入門
