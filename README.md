@@ -43,9 +43,8 @@
 + [型・変数](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter06.ipynb)
 <!--(src/chapter06.ipynb)-->
 
-+ [繰り返し処理, numpyを用いた特殊関数の計算](src/chapter07.ipynb)
-
-+ [応用例ー実験ノートの作成ー](src/chapter08.ipynb)
++ [繰り返し処理, numpyを用いた特殊関数の計算](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter07.ipynb)
++ [応用例ー実験ノートの作成ー](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter08.ipynb)
 
 <!---
 ### プログラミング入門
