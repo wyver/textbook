@@ -40,7 +40,8 @@
 
 + [Jupyter-notebookの基本的な使用方法](src/chapter05.md)
 
-+ [型・変数](src/chapter06.ipynb)
++ [型・変数](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter06.ipynb)
+<!--(src/chapter06.ipynb)-->
 
 + [繰り返し処理, numpyを用いた特殊関数の計算](src/chapter07.ipynb)
 
