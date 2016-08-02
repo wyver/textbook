@@ -35,35 +35,66 @@
 インストールについては[こちら](src/chapter04.md)を参考にすること。
 
 
-### 対話型数値計算
+### [Jupyter-notebookの基本的な使用方法](src/chapter05.md)
 この章では、数値計算を簡単に実行できる対話型環境 （Jupyter-notebook）を用いて数値計算に慣れることを目標とする。
 
-+ [Jupyter-notebookの基本的な使用方法](src/chapter05.md)
+### [型・変数](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter06.ipynb)
 
-+ [型・変数](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter06.ipynb)
+まずはPythonを電卓として使う。簡単な四則演算をコンピュータに命令し実行させることで、
+
+数値計算の重要な概念となる型・変数の概念について学ぶ。
+
+特に、整数型・実数型・文字型・リスト型を紹介する。
+
+計算の具体例として、フィボナッチ数列を計算する。
+その結果をグラフ描画することで、計算の過程を実感する。
+
+
 <!--(src/chapter06.ipynb)-->
 
-+ [繰り返し処理, numpyを用いた特殊関数の計算](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter07.ipynb)
-+ [応用例ー実験ノートの作成ー](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter08.ipynb)
+### [繰り返し処理、関数、numpyを用いた特殊関数の計算](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter07.ipynb)
 
-<!---
-### プログラミング入門
-(３回)
+コンピュータに効率よく計算をさせるには、よく似た処理を「繰り返し」行わせることが重要である。
 
-関数の概念を学ぶとともに、その実装法について学ぶ。
+ここでは、Pythonが提供する繰り返し構造である`for`ループと`while`ループについて学ぶ。
+リスト型変数との組み合わせにより、効率よく計算ができることを示す。
+
+前回に比べてソースコードはだんだん長くなってくる。
+このような複雑な計算をするプログラムを開発する上では
+「わかりやすい」ソースコードを書くということが非常に重要となる。
+
+そのための重要な概念である「関数」について学ぶ。
+ベクトルの内積や行列積を行うための関数を実装してみることで、関数の仕組みや実装の仕方を学ぶ。
+これらを通して、「機能のカプセル化」という概念を学ぶ。
+
+このような汎用的な関数の多くはライブラリとしてまとめられており、これらを用いることでより複雑な計算も行うことができる。
+数値計算ライブラリnumpyを用いて、三角関数などの特殊関数を計算し、グラフ描画を行う。
 
 
-#### 関数
-具体的な目的を持った関数を設計し、実装する。
+### [応用ー実験ノートの作成ー](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter08.ipynb)
+
+この章ではプログラミングの身近な応用先として、実験ノートの作成・実験データの解析を行う。
+仮想的な実験データを描画しデータを概観する。
+さらにそのデータに対し最小二乗近似を行い、データから意味を抽出する。
+
+[宿題](chapter09.md)
+
+### [応用ーロケット弾道のシミュレーションー](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter10.ipynb)
+
+この章では別の応用先として、ロケットの弾道のシミュレーションを行う。
+空気抵抗があるときの物体の運動方程式を差分化し、繰り返し処理を用いてその起動をシミュレートする。
 
 
+### [応用ー素数探索ー](http://nbviewer.jupyter.org/github/Johokiso-enshu/textbook/blob/master/src/chapter11.ipynb)
 
-### プログラミング初歩
-(２回)
-オブジェクト指向プログラミングの概念と、その実装法について触れる。
+この回では、これまで習った技術を用いて、素数探索プログラムをゼロから作成する。
+ロジックを工夫し、わかりやすく、計算速度が早いプログラムを作成することが目的である。
+特に計算速度定を計測し、最も速いプログラムと、そうでないプログラムを比較することで、
+数値計算のボトルネックや、アルゴリズムの改善法について学ぶ。
 
-!---　何か一つのpyファイルを作る　--
-
+### 発展ーオブジェクト指向入門ー
+この章では、関数よりもさらに高度にカプセル化するための概念である「オブジェクト指向」プログラミングについて学ぶ。
+現代的なプログラミングを行う上で必要な概念を実感する。
 
 ## Linux入門
 (２回)
@@ -71,4 +102,3 @@
 計算機サーバなどで用いられるLinuxの使用法を学ぶ。
 
 基本的なコマンド操作法を学ぶとともに、これまで作成したプログラムをコマンド操作から実行する方法について述べる。
---->
