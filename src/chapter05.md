@@ -35,15 +35,26 @@ Jupyter-notebookの起動画面の一例。
 本演習を含め、将来的にはJupyter-notebookファイルを大量に作成することになる。
 作成したファイルを見つけやすくするために、フォルダ構造を整理する。
 
-マイドキュメント フォルダの中に、Johokiso-enshuフォルダを作成する。
-マイドキュメントフォルダをクリックしその中に移動したあと、NewボタンからFolderをクリックする。
-作成したフォルダの左側のチェックボックスをクリックすると出てくる renameボタンを押すことで名前の変更ができる。
+まず、マイドキュメント内に新しいフォルダを作成する。
+右上の`new`メニューの中の`Folder`をクリックすると、Untitled Folderという名前のフォルダが作成される。
+
+<img src=figs/fig_python_install/Jupyter_new_folder.png width=480pt>
+
+このままでは、このフォルダに何が入っているかわからないので、適切な名前に変更しよう。
+フォルダ名を変更するには、フォルダ名の左側のチェックボックスにチェックを入れ、`Rename`をクリックする。
+これからこの授業で作成するファイルは、このフォルダ内に保存することにする。
+そのため、ファイル名を`Johokiso-enshu`としよう。
 
 <img src=figs/fig_python_install/Jupyter-launch1.png width=480pt>
 
-Jupyter-notebookでフォルダ構造を整理する。フォルダ名左横のチェックボックスを押すと、`rename`ボタンが出る。
+<img src=figs/fig_python_install/Jupyter_rename_folder.png width=480pt>
 
-Johokiso-enshuフォルダ内に移動し、NewボタンからPython 3を起動する。
+次に、このフォルダ内にJupyter-notebookファイルを作成する。
+フォルダ名をクリックして`Johokiso-enshu`フォルダ内に移動する。
+
+`New`ボタンからPython [root] を起動する。
+
+<img src=figs/fig_python_install/Jupyter_new_note.png width=480pt>
 
 
 ----------------------------------
