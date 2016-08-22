@@ -6,30 +6,30 @@ program FreeFall
 
   open(unit=10, file='freefall.dat')
 
-! ƒpƒ‰ƒ[ƒ^. 
+! ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿. 
   n  = 100
   dt = 1.d-2
   g  = 9.8d0
 
-! ‰ŠúğŒ. 
+! åˆæœŸæ¡ä»¶. 
   h  = 1.d0
   u0 = 0.d0
   x  = h
   u  = u0
-  write(10,'(5E18.10)') 0.d0, x, u, h, u0     ! o—Í. 
+  write(10,'(5E18.10)') 0.d0, x, u, h, u0     ! å‡ºåŠ›. 
 
   do i = 1, n
     xold = x 
     uold = u
 
-    x = xold + uold*dt     ! Euler–@‚É‚æ‚éŠÔ”­“W.
-    u = uold - g*dt        ! Euler–@‚É‚æ‚éŠÔ”­“W.
+    x = xold + uold*dt     ! Euleræ³•ã«ã‚ˆã‚‹æ™‚é–“ç™ºå±•.
+    u = uold - g*dt        ! Euleræ³•ã«ã‚ˆã‚‹æ™‚é–“ç™ºå±•.
 
     t = dble(i)*dt
-    xtrue = h+u0*t-g*t*t*0.5d0     ! Œµ–§‰ğ. 
-    utrue = u0-g*t     ! Œµ–§‰ğ. 
+    xtrue = h+u0*t-g*t*t*0.5d0     ! å³å¯†è§£. 
+    utrue = u0-g*t     ! å³å¯†è§£. 
 
-    write(10,'(5E18.10)') t, x, u, xtrue, utrue     ! o—Í. 
+    write(10,'(5E18.10)') t, x, u, xtrue, utrue     ! å‡ºåŠ›. 
   enddo
 
   close(unit=10)

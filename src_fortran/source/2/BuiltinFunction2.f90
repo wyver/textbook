@@ -1,9 +1,9 @@
 program MathematicalConstants
-  implicit none     ! ˆÃ–Ù‚ÌŒ^éŒ¾‚Ì‹Ö~. 
+  implicit none     ! æš—é»™ã®å‹å®£è¨€ã®ç¦æ­¢. 
   real(8):: pi1, e1, pi2, e2
   
-  pi1 = acos(-1.0)     ! pi1‚Ìˆø”‚Í’P¸“xÀ”. 
-  pi2 = acos(-1.0d0)     ! pi2‚Ìˆø”‚Í”{¸“xÀ”. 
+  pi1 = acos(-1.0)     ! pi1ã®å¼•æ•°ã¯å˜ç²¾åº¦å®Ÿæ•°. 
+  pi2 = acos(-1.0d0)     ! pi2ã®å¼•æ•°ã¯å€ç²¾åº¦å®Ÿæ•°. 
   
   e1  = exp(1.0)
   e2  = exp(1.0d0)

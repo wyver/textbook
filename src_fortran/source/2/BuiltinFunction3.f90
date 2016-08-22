@@ -1,11 +1,11 @@
 program TrigonometricFunction
-  implicit none     ! ˆÃ–Ù‚ÌŒ^éŒ¾‚Ì‹Ö~. 
+  implicit none     ! æš—é»™ã®å‹å®£è¨€ã®ç¦æ­¢. 
   real(8):: pi, xdeg, xrad, f, g, h
 
-  pi = acos(-1.d0)     ! ‚ ‚ç‚©‚¶‚ßpi‚ÍŒvZ‚µ‚Ä‚¨‚­. 
+  pi = acos(-1.d0)     ! ã‚ã‚‰ã‹ã˜ã‚piã¯è¨ˆç®—ã—ã¦ãŠã. 
 
-  xdeg = 60.d0     ! “ü—Í(“x). 
-  xrad = xdeg*pi/180.d0     ! ƒ‰ƒWƒAƒ“‚Ö•ÏŠ·. 
+  xdeg = 60.d0     ! å…¥åŠ›(åº¦). 
+  xrad = xdeg*pi/180.d0     ! ãƒ©ã‚¸ã‚¢ãƒ³ã¸å¤‰æ›. 
 
   f = sin(xrad)
   g = cos(xrad)

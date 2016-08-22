@@ -1,5 +1,5 @@
 program TypeConversion
-  implicit none     ! ˆÃ–Ù‚ÌŒ^éŒ¾‚Ì‹Ö~. 
+  implicit none     ! æš—é»™ã®å‹å®£è¨€ã®ç¦æ­¢. 
   integer:: i, j
   real(8):: x, y
   complex(8):: z
@@ -7,19 +7,19 @@ program TypeConversion
   x = sqrt(3.d0)*0.5d0
   y = 0.5d0
   
-  z = dcmplx(x, y)     ! dcmplx(x, y)‚Í”{¸“x•¡‘f”Œ^‚Ö‚Ì•ÏŠ·. 
+  z = dcmplx(x, y)     ! dcmplx(x, y)ã¯å€ç²¾åº¦è¤‡ç´ æ•°å‹ã¸ã®å¤‰æ›. 
   write(6,*) z
 
-  x = dble(z**2)     ! dble(z)‚Íz‚ÌÀ•”(”{¸“xÀ”Œ^). 
-  y = dimag(z**2)     ! dimag(z)‚Íz‚Ì‹••”(”{¸“xÀ”Œ^). 
+  x = dble(z**2)     ! dble(z)ã¯zã®å®Ÿéƒ¨(å€ç²¾åº¦å®Ÿæ•°å‹). 
+  y = dimag(z**2)     ! dimag(z)ã¯zã®è™šéƒ¨(å€ç²¾åº¦å®Ÿæ•°å‹). 
   write(6,*) x, y
 
-  i = int(y)     ! int(x)‚Í®”Œ^‚Ö‚Ì•ÏŠ·(Ø‚èÌ‚Ä). 
-  j = nint(y)     ! nint(x)‚Í®”Œ^‚Ö‚Ì•ÏŠ·(lÌŒÜ“ü). 
+  i = int(y)     ! int(x)ã¯æ•´æ•°å‹ã¸ã®å¤‰æ›(åˆ‡ã‚Šæ¨ã¦). 
+  j = nint(y)     ! nint(x)ã¯æ•´æ•°å‹ã¸ã®å¤‰æ›(å››æ¨äº”å…¥). 
   write(6,*) i, j
   
   y = dble(j)
-  write(6,*) y     ! dble(x)‚Í®”Œ^‚©‚ç”{¸“xÀ”Œ^‚Ö‚Ì•ÏŠ·‚É‚àg—p‰Â. 
+  write(6,*) y     ! dble(x)ã¯æ•´æ•°å‹ã‹ã‚‰å€ç²¾åº¦å®Ÿæ•°å‹ã¸ã®å¤‰æ›ã«ã‚‚ä½¿ç”¨å¯. 
   
   stop
 end program TypeConversion

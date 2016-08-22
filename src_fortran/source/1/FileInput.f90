@@ -1,9 +1,9 @@
 program FileInput
-  open(unit=1, file='input.dat')     ! “ü—Íæ‚Æ‚µ‚Äinput.dat‚ğŠJ‚­. ‘•’u”Ô†‚ğ1‚Æ‚·‚é. 
-  read(1,*) x, y     ! x, y‚ğinput.dat‚©‚ç“Ç‚İ‚Ş. 
+  open(unit=1, file='input.dat')     ! å…¥åŠ›å…ˆã¨ã—ã¦input.datã‚’é–‹ã. è£…ç½®ç•ªå·ã‚’1ã¨ã™ã‚‹. 
+  read(1,*) x, y     ! x, yã‚’input.datã‹ã‚‰èª­ã¿è¾¼ã‚€. 
   close(unit=1)
 
-  open(unit=2, file='output.dat')     ! o—Íæ‚Æ‚µ‚Äoutput.dat‚ğŠJ‚­. ‘•’u”Ô†‚ğ2‚Æ‚·‚é. 
+  open(unit=2, file='output.dat')     ! å‡ºåŠ›å…ˆã¨ã—ã¦output.datã‚’é–‹ã. è£…ç½®ç•ªå·ã‚’2ã¨ã™ã‚‹. 
   write(2,*) 'x = ', x, 'y = ', y
   write(2,*) 'x + y = ', x+y
   write(2,*) 'x - y = ', x-y

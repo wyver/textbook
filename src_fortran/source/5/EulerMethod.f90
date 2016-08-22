@@ -5,26 +5,26 @@ program EulerMethod
 
   open(unit=10, file='euler.dat')
 
-! ƒpƒ‰ƒ[ƒ^. 
+! ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿. 
   n  = 1000
   dt = 1.d-2
   a  = 1.d0
 
-! ‰ŠúğŒ. 
+! åˆæœŸæ¡ä»¶. 
   x0 = 1.d0
   x  = x0
-  write(10,'(3E18.10)') 0.d0, x, x0     ! o—Í. 
+  write(10,'(3E18.10)') 0.d0, x, x0     ! å‡ºåŠ›. 
 
   do i = 1, n
     xold = x
 
-    f = a*xold     ! ‰E•Ó‚ğ‚ ‚ç‚©‚¶‚ßŒvZ. 
-    x = xold + f*dt     ! Euler–@‚É‚æ‚éŠÔ”­“W. 
+    f = a*xold     ! å³è¾ºã‚’ã‚ã‚‰ã‹ã˜ã‚è¨ˆç®—. 
+    x = xold + f*dt     ! Euleræ³•ã«ã‚ˆã‚‹æ™‚é–“ç™ºå±•. 
 
     t = dble(i)*dt
-    xtrue = x0*exp(a*t)     ! Œµ–§‰ğ. 
+    xtrue = x0*exp(a*t)     ! å³å¯†è§£. 
 
-    write(10,'(3E18.10)') t, x, xtrue     ! o—Í. 
+    write(10,'(3E18.10)') t, x, xtrue     ! å‡ºåŠ›. 
   enddo
 
   close(unit=10)

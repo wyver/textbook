@@ -2,12 +2,12 @@ program Timing
   implicit none
   integer:: t1, t2, t_rate
 
-  call system_clock(t1)     ! ‚±‚±‚©‚çŠÔ‘ª’è. 
+  call system_clock(t1)     ! ã“ã“ã‹ã‚‰æ™‚é–“æ¸¬å®š. 
 
-! “K“–‚Èˆ—
+! é©å½“ãªå‡¦ç†
   
-  call system_clock(t1,t_rate)     ! ‚±‚±‚Ü‚ÅŠÔ‘ª’è. 
-  write(6,*) (t2-t1)/dble(t_rate), 'sec'     ! •b’PˆÊ‚ÅÀsŠÔ‚ğ•\¦. 
+  call system_clock(t1,t_rate)     ! ã“ã“ã¾ã§æ™‚é–“æ¸¬å®š. 
+  write(6,*) (t2-t1)/dble(t_rate), 'sec'     ! ç§’å˜ä½ã§å®Ÿè¡Œæ™‚é–“ã‚’è¡¨ç¤º. 
 
   stop
 end program Timing

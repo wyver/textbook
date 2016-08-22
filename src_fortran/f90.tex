@@ -9,6 +9,7 @@
 \usepackage{listings,jlisting}
 \usepackage{color}
 \usepackage{subfig}
+\usepackage{comment}
 
 \lstset{%
   language={Fortran},
@@ -41,7 +42,9 @@
 
 \subsection{プログラムのコンパイルと実行}
 はじめに, コマンドプロンプトを立ち上げる. 
+%TODO コマンドプロンプトの立ち上げ方
 次にソースファイルを保存するためのディレクトリを適当な場所に作成する. 
+%TODO ディレクトリの完成図
 以下では, ホームディレクトリの下に, ``fortran"という名前のディレクトリを作成したものとして説明を進める. 
 ディレクトリの作成は, コマンドプロンプト上で, 
 \begin{Verbatim}[frame=single]
@@ -53,6 +56,7 @@
 >notepad
 \end{Verbatim}
 と入力し, ディレクトリ``fortran"に移動したのち, メモ帳を開く. 
+%TODO 色がつくエディタを使わせたい
 以上の作業はコマンドプロンプトを利用せず, マウス操作でおこなってもよい. 
 
 メモ帳に以下の内容を入力し, ``HelloWorld.f90"という名前で保存をする. 
@@ -112,6 +116,7 @@ write文とread文の括弧の中の6と5は,
 和差積商はそれぞれ記号$+-*/$で表される. 
 \\
 
+\begin{comment}
 上のプログラムに少し手を加えて, 結果をファイルに出力するように変更したものが以下である. 
 \lstinputlisting[caption=ファイル出力. , label=fileoutput]{source/1/FileOutput.f90}
 open文を用いて装置番号1のファイル``output.dat"を開いておき, 
@@ -127,6 +132,7 @@ write文で書き出す際には装置番号1を指定している.
 \begin{Verbatim}[frame=single]
 1.2 3.14
 \end{Verbatim}
+\end{comment}
 
 \subsection{変数型}
 Fortranで数値を扱う場合, それが整数なのか, 実数なのか, 複素数なのかをあらかじめ宣言しておく必要があり, 

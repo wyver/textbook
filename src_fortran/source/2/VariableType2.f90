@@ -1,13 +1,13 @@
 program VariableType2
-  implicit none     ! ˆÃ–Ù‚ÌŒ^éŒ¾‚Ì‹Ö~. 
-  character(len=5) c1, c2, c3, c4     ! c1, c2, c3, c4‚Í5•¶š‚Ì•¶šŒ^. 
+  implicit none     ! æš—é»™ã®å‹å®£è¨€ã®ç¦æ­¢. 
+  character(len=5) c1, c2, c3, c4     ! c1, c2, c3, c4ã¯5æ–‡å­—ã®æ–‡å­—å‹. 
   
   c1 = 'Kyoto'
   c2 = 'City'
   c3 = 'Prize'
   c4 = 'University'
 
-  write(6,*) '"', c1//c2, '"'     ! //‚Í•¶šŒ^‚ÌŒ‹‡. 
+  write(6,*) '"', c1//c2, '"'     ! //ã¯æ–‡å­—å‹ã®çµåˆ. 
   write(6,*) '"', c1//c3, '"'
   write(6,*) '"', c1//c4, '"'
 

@@ -1,8 +1,8 @@
 program FourOperations
   write(6,*) 'Input x and y.'
-  read(5,*) x, y     ! x, y‚ğƒL[ƒ{[ƒh‚©‚ç‘Å‚¿‚Ş. 
+  read(5,*) x, y     ! x, yã‚’ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰æ‰“ã¡è¾¼ã‚€. 
 
-  write(6,*) 'x = ', x, 'y = ', y     ! ‘Å‚¿‚ñ‚¾”š‚ª‚»‚Ì‚Ü‚Ü•\¦‚³‚ê‚é. 
+  write(6,*) 'x = ', x, 'y = ', y     ! æ‰“ã¡è¾¼ã‚“ã æ•°å­—ãŒãã®ã¾ã¾è¡¨ç¤ºã•ã‚Œã‚‹. 
   write(6,*) 'x + y = ', x+y
   write(6,*) 'x - y = ', x-y
   write(6,*) 'x * y = ', x*y

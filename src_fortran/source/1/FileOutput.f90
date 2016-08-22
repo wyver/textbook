@@ -1,15 +1,15 @@
 program FileOutput
   write(6,*) 'Input x and y.'
-  read(5,*) x, y     ! x, y‚ğƒL[ƒ{[ƒh‚©‚ç‘Å‚¿‚Ş. 
+  read(5,*) x, y     ! x, yã‚’ã‚­ãƒ¼ãƒœãƒ¼ãƒ‰ã‹ã‚‰æ‰“ã¡è¾¼ã‚€. 
 
-  open(unit=1, file='output.dat')     ! o—Íæ‚Æ‚µ‚Äoutput.dat‚ğŠJ‚­. ‘•’u”Ô†‚ğ1‚Æ‚·‚é. 
-  write(1,*) 'x = ', x, 'y = ', y     ! Œ‹‰Ê‚ª‘•’u”Ô†1‚Éo—Í‚³‚ê‚é. 
+  open(unit=1, file='output.dat')     ! å‡ºåŠ›å…ˆã¨ã—ã¦output.datã‚’é–‹ã. è£…ç½®ç•ªå·ã‚’1ã¨ã™ã‚‹. 
+  write(1,*) 'x = ', x, 'y = ', y     ! çµæœãŒè£…ç½®ç•ªå·1ã«å‡ºåŠ›ã•ã‚Œã‚‹. 
   write(1,*) 'x + y = ', x+y
   write(1,*) 'x - y = ', x-y
   write(1,*) 'x * y = ', x*y
   write(1,*) 'x / y = ', x/y
   write(1,*) 'x = ', x, 'y = ', y     
-  close(unit=1)     ! ‘•’u”Ô†1‚ğ•Â‚¶‚é. 
+  close(unit=1)     ! è£…ç½®ç•ªå·1ã‚’é–‰ã˜ã‚‹. 
 
   stop
 end program FileOutput
