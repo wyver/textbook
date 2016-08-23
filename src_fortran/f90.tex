@@ -91,9 +91,55 @@ Fortranは大文字と小文字を区別しないため, どちらで書いて�
 と入力すれば, クォーテーションマークの内側に書いた文字列(サンプルプログラムではHello World!)が
 そのまま画面上に表示される. 
 
-\subsection{簡単な計算と入出力}
+\subsection{簡単な計算と変数}
+\subsubsection*{電卓としての利用}
+簡単な計算結果を画面に表示するプログラムを作成する。
+\lstinputlisting[caption=電卓としての利用. , label=readwrite]{source/1/Calculator.f90}
+このソースコードをコンパイルし、実行せよ。
+画面に``1+1" の答えである``2" と、``3*2"の答えである``6"が表示されること確認確認せよ。
+さらに3行目は、``3*2”の計算を行うのではなく、`3*2`と表示させている。この違いを確認せよ。
+
+%TODO 四則演算やべき乗の演算子を説明する。三角関数などの組み込み関数もここで説明する。
+\begin{comment}
+\subsection{組込み関数}
+%TODO 電卓の章に持ってくればどうか。
+Fortranには三角関数をはじめとする初等関数や変数型の変換をおこなう関数があらかじめ用意されており, 
+これらは組込み関数と呼ばれる. 
+絶対値absと平方根sqrtの使用例が以下である. 
+\lstinputlisting[caption={組込み関数. }, label=builtinfunction1]{source/2/BuiltinFunction1.f90}
+
+円周率$\pi$や自然対数の底$e$は逆三角関数や指数関数を用いて次のように計算できる. 
+\lstinputlisting[caption={数学定数. }, label=builtinfunction2]{source/2/BuiltinFunction2.f90}
+変数を倍精度で宣言していたとしても, 関数の引数が単精度であれば戻り値も単精度になることに注意せよ. \\
+
+
+三角関数の引数はラジアンで与えなければならない. 
+度からラジアンへの変換には, 以下のプログラムのようにあらかじめ計算した円周率を利用する. 
+\lstinputlisting[caption={三角関数. }, label=builtinfunction3]{source/2/BuiltinFunction3.f90}
+以上に示した関数以外にも対数や双曲線関数などを計算する関数が用意されている. 
+必要に応じて調べてみよ. 
+\end{comment}
+
+\subsubsection*{$<$演習課題$>$}
+% この演習問題で、変数の必要性を認識させる。
+以下の計算結果を全て出力するプログラムを作成せよ。一つのソースコード内に全て記述すること。
+\begin{enumerate}
+\item $3^2$
+\item $4^2$
+\item $(3^2+4^2)^2$
+\end{enumerate}
+
+\subsubsection*{変数}
+上記演習問題3のように、以前の計算結果を繰り返し利用したいことが多い。
+そのためFortranには、計算結果を格納する{\bfseries 変数}という仕組みが用意されている。
+以下は、変数を利用するプログラムである。
+\lstinputlisting[caption=変数を用いた計算. , label=variable]{source/1/Calculator2.f90}
+
+
+\subsubsection*{より汎用的な電卓プログラムの作成}
+
 画面上で二つの数値x, yを読み取り, それらをそのまま画面上に表示するプログラムの例を以下に示す. 
-\lstinputlisting[caption=標準入出力. , label=readwrite]{source/1/ReadWrite.f90}
+\lstinputlisting[caption=標準入出力を用いた電卓プログラム. , label=readwrite]{source/1/ReadWrite.f90}
 このプログラムを実行すると, x, yという二つの数値の入力待ちとなるため, 
 キーボードから任意の数字を入力する. 
 x=1.2, y=3.14を入力するには, 
@@ -116,6 +162,7 @@ write文とread文の括弧の中の6と5は,
 和差積商はそれぞれ記号$+-*/$で表される. 
 \\
 
+% TODO 出力・入力は、必要性を感じさせてから紹介する。
 \begin{comment}
 上のプログラムに少し手を加えて, 結果をファイルに出力するように変更したものが以下である. 
 \lstinputlisting[caption=ファイル出力. , label=fileoutput]{source/1/FileOutput.f90}
@@ -135,18 +182,23 @@ write文で書き出す際には装置番号1を指定している.
 \end{comment}
 
 \subsection{変数型}
-Fortranで数値を扱う場合, それが整数なのか, 実数なのか, 複素数なのかをあらかじめ宣言しておく必要があり, 
-それぞれ整数型(integer), 実数型(real), 複素数型(complex)と呼ばれる. 
-数学的には, 整数は実数に含まれ, 実数は複素数に含まれるが, 
-安直に全てを複素数として扱ってはいけない. 
+コンピュータは, 整数・実数・複素数を区別して扱う.ｋ
+そのため, 計算結果を格納する変数がどの形式に相当するのかを予めコンピュータに伝える必要がある。
+前述ソースコード中の{\ttfamily integer x} は、変数{\ttfamily x}が整数型(integer)であることを示す。
+Fortranでは整数・実数・複素数は, それぞれ整数型(integer), 実数型(real(8)), 複素数型(complex)と呼ばれる形式で扱われる.
+
+数学的には、整数、実数も全て複素数に含まれるが、コンピュータに数値計算をさせる時には、それらを区別し取り扱うことで効率の良い計算ができる。
 例えば, 1, 2, 3, $\cdots$と離散的に数え上げられるものには整数型を用いるべきであるし, 
-計算結果が明らかに実数である計算において複素数型を用いるのは計算機資源の無駄となる. 
-また, 実数型には単精度実数型(real)と倍精度実数型(real(8))が存在し
+計算結果が明らかに実数である計算において複素数型を用いることは、不必要な虚数部を計算することになるため計算機資源の無駄となる. 
+
+\footnote{実数型には単精度実数型(real)と倍精度実数型(real(8))が存在し
 (実は4倍精度実数型というものもあるがここでは触れない), 
 それぞれ十進数で約7桁, 16桁の精度をもつ. 
 特別の理由がない限り, 実数型の計算においては倍精度実数型を用いるのが普通である. 
+}
 型の違いが計算結果にどのように影響するか, 次のプログラムを実行することで確かめてみよ. 
 \lstinputlisting[caption={整数型, 実数型, 複素数型. }, label=variabletype]{source/2/VariableType.f90}
+\begin{comment}
 プログラム中の3行目から6行目が変数型を宣言している部分である. 
 もしも変数型を明示的に宣言しないと, a-h, o-zで始まる変数は``単精度"実数型, 
 i-nで始まる変数は整数型として自動的に扱われる(暗黙の型宣言). 
@@ -154,6 +206,7 @@ i-nで始まる変数は整数型として自動的に扱われる(暗黙の型�
 宣言をしていない変数を使用するとコンパイルエラーになる. 
 暗黙の型宣言を禁止することで, タイプミスや変数型の勘違いなどを防ぐことができるので, 
 バグの入りにくいプログラムを書くことができる. 
+\end{comment}
 
 変数に数値を代入するには記号$=$を使う. 
 これは等号ではなく, 左辺の変数に右辺の値を代入する命令であることに注意せよ. 
@@ -162,37 +215,59 @@ i-nで始まる変数は整数型として自動的に扱われる(暗黙の型�
 例えば10という値は, 整数型ではそのまま10と書けばよいが, 
 倍精度実数型では10.d0または1.d1, 倍精度複素数型では(10.d0, 0.d0)となどと書く. \\
 
-
+\begin{comment}
 Fortranは文字も変数として扱うことができる(文字型: character). 
 文字の長さはcharacter(len=5)などとして指定する. 
 次のプログラムは文字型を扱った例である. 
 \lstinputlisting[caption={文字型. }, label=variabletype2]{source/2/VariableType2.f90}
+\end{comment}
 
-
-\subsection{組込み関数}
-Fortranには三角関数をはじめとする初等関数や変数型の変換をおこなう関数があらかじめ用意されており, 
-これらは組込み関数と呼ばれる. 
-絶対値absと平方根sqrtの使用例が以下である. 
-\lstinputlisting[caption={組込み関数. }, label=builtinfunction1]{source/2/BuiltinFunction1.f90}
-
-円周率$\pi$や自然対数の底$e$は逆三角関数や指数関数を用いて次のように計算できる. 
-\lstinputlisting[caption={数学定数. }, label=builtinfunction2]{source/2/BuiltinFunction2.f90}
-変数を倍精度で宣言していたとしても, 関数の引数が単精度であれば戻り値も単精度になることに注意せよ. \\
-
-
-三角関数の引数はラジアンで与えなければならない. 
-度からラジアンへの変換には, 以下のプログラムのようにあらかじめ計算した円周率を利用する. 
-\lstinputlisting[caption={三角関数. }, label=builtinfunction3]{source/2/BuiltinFunction3.f90}
-以上に示した関数以外にも対数や双曲線関数などを計算する関数が用意されている. 
-必要に応じて調べてみよ. 
 
 \subsubsection*{$<$演習課題$>$}
 二辺の長さとそれらのなす角度を読み取り, その三角形の面積を計算するプログラムを作成せよ. \\
 
+\begin{comment}
 異なる型同士の演算は文法エラーではないが, 
 避けることが望ましい. 
 以下のプログラムは, 整数型, 実数型, 複素数型間の型変換の例である. 
 \lstinputlisting[caption={型変換. }, label=builtinfunction4]{source/2/BuiltinFunction4.f90}
+\end{comment}
+
+\subsection{繰り返し処理}
+\subsubsection*{$<$演習課題$>$}
+以下で表されるフィボナッチ数列$a_k$について、$k=1,2, \cdots, 10$の値を画面に表示するプログラムを作成せよ。 \\
+\begin{eqnarray}
+a_0 &=& 1 \\
+a_1 &=& 1 \\
+a_{k+2} &=& a_{k+1} + a_k
+\end{eqnarray}
+
+この例では、10回同じ計算をソースコードに記述している。
+しかし実際の数値計算の場面では、もっと複雑な計算を多数回行うことが多い。
+このような同じ処理を繰り返し行うための枠組みが用意されている。
+
+%TODO フィボナッチ数列の例に変える。
+\lstinputlisting[caption={繰り返し処理を用いたフィボナッチ数列の計算. }, label=doloop]{source/2/DoLoop.f90}
+
+
+%\lstinputlisting[caption={総和. }, label=summation]{source/2/Summation.f90}
+
+\subsection{グラフ描画}
+以上の例では、計算された値が画面に出力されるだけなので、その計算結果の様子がつかみにくい。
+計算結果を直感的に理解するには、グラフ化することが効果的である。
+
+計算結果をグラフ化するため、以下の項目を学習する。
+\begin{enumerate}
+	\item 計算結果をファイルへ出力する。
+	\item 結果が格納されたファイルを読み取り、その結果をグラフ化する。
+\end{enumerate}
+
+\subsubsection*{ファイル出力}
+[ファイル出力の説明]
+
+\subsubsection*{グラフ描画入門}
+[グラフ描画の説明]
+
 
 
 \subsection{条件分岐}
@@ -225,10 +300,6 @@ if文の括弧の中には以下の表のように, 適当な等式, あるい�
 \subsubsection*{$<$演習課題$>$}
 二次方程式の判別式を計算し, それが正のときは二実数解, 
 零のときは重解, 負のときは複素数解を計算するプログラムを作成せよ. 
-
-\subsection{繰り返し処理}
-\lstinputlisting[caption={繰り返し処理. }, label=doloop]{source/2/DoLoop.f90}
-\lstinputlisting[caption={総和. }, label=summation]{source/2/Summation.f90}
 
 \subsubsection*{$<$演習課題$>$}
 自然対数の底$e$の近似値を以下に示す二つの数列を用いて計算せよ. 
