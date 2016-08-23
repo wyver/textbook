@@ -1,4 +1,4 @@
-\documentclass[a4j]{jsarticle}
+\documentclass[a4j]{jsbook}
 \usepackage[top=20truemm,bottom=25truemm,left=25truemm,right=25truemm]{geometry}
 \usepackage{amsmath}
 \usepackage{bm}
@@ -38,9 +38,9 @@
 \date{}
 \maketitle
 
-\section{Fortran90の基礎}
+\chapter{Fortran90の基礎}
 
-\subsection{プログラムのコンパイルと実行}
+\section{プログラムのコンパイルと実行}
 はじめに, コマンドプロンプトを立ち上げる. 
 %TODO コマンドプロンプトの立ち上げ方
 次にソースファイルを保存するためのディレクトリを適当な場所に作成する. 
@@ -91,8 +91,8 @@ Fortranは大文字と小文字を区別しないため, どちらで書いて�
 と入力すれば, クォーテーションマークの内側に書いた文字列(サンプルプログラムではHello World!)が
 そのまま画面上に表示される. 
 
-\subsection{簡単な計算と変数}
-\subsubsection*{電卓としての利用}
+\section{簡単な計算と変数}
+\subsection*{電卓としての利用}
 簡単な計算結果を画面に表示するプログラムを作成する。
 \lstinputlisting[caption=電卓としての利用. , label=readwrite]{source/1/Calculator.f90}
 このソースコードをコンパイルし、実行せよ。
@@ -101,7 +101,7 @@ Fortranは大文字と小文字を区別しないため, どちらで書いて�
 
 %TODO 四則演算やべき乗の演算子を説明する。三角関数などの組み込み関数もここで説明する。
 \begin{comment}
-\subsection{組込み関数}
+\section{組込み関数}
 %TODO 電卓の章に持ってくればどうか。
 Fortranには三角関数をはじめとする初等関数や変数型の変換をおこなう関数があらかじめ用意されており, 
 これらは組込み関数と呼ばれる. 
@@ -120,7 +120,7 @@ Fortranには三角関数をはじめとする初等関数や変数型の変換�
 必要に応じて調べてみよ. 
 \end{comment}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 % この演習問題で、変数の必要性を認識させる。
 以下の計算結果を全て出力するプログラムを作成せよ。一つのソースコード内に全て記述すること。
 \begin{enumerate}
@@ -129,14 +129,14 @@ Fortranには三角関数をはじめとする初等関数や変数型の変換�
 \item $(3^2+4^2)^2$
 \end{enumerate}
 
-\subsubsection*{変数}
+\subsection*{変数}
 上記演習問題3のように、以前の計算結果を繰り返し利用したいことが多い。
 そのためFortranには、計算結果を格納する{\bfseries 変数}という仕組みが用意されている。
 以下は、変数を利用するプログラムである。
 \lstinputlisting[caption=変数を用いた計算. , label=variable]{source/1/Calculator2.f90}
 
 
-\subsubsection*{より汎用的な電卓プログラムの作成}
+\subsection*{より汎用的な電卓プログラムの作成}
 
 画面上で二つの数値x, yを読み取り, それらをそのまま画面上に表示するプログラムの例を以下に示す. 
 \lstinputlisting[caption=標準入出力を用いた電卓プログラム. , label=readwrite]{source/1/ReadWrite.f90}
@@ -181,7 +181,7 @@ write文で書き出す際には装置番号1を指定している.
 \end{Verbatim}
 \end{comment}
 
-\subsection{変数型}
+\section{変数型}
 コンピュータは, 整数・実数・複素数を区別して扱う.ｋ
 そのため, 計算結果を格納する変数がどの形式に相当するのかを予めコンピュータに伝える必要がある。
 前述ソースコード中の{\ttfamily integer x} は、変数{\ttfamily x}が整数型(integer)であることを示す。
@@ -223,7 +223,7 @@ Fortranは文字も変数として扱うことができる(文字型: character)
 \end{comment}
 
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 二辺の長さとそれらのなす角度を読み取り, その三角形の面積を計算するプログラムを作成せよ. \\
 
 \begin{comment}
@@ -233,8 +233,8 @@ Fortranは文字も変数として扱うことができる(文字型: character)
 \lstinputlisting[caption={型変換. }, label=builtinfunction4]{source/2/BuiltinFunction4.f90}
 \end{comment}
 
-\subsection{繰り返し処理}
-\subsubsection*{$<$演習課題$>$}
+\section{繰り返し処理}
+\subsection*{$<$演習課題$>$}
 以下で表されるフィボナッチ数列$a_k$について、$k=1,2, \cdots, 10$の値を画面に表示するプログラムを作成せよ。 \\
 \begin{eqnarray}
 a_0 &=& 1 \\
@@ -252,7 +252,7 @@ a_{k+2} &=& a_{k+1} + a_k
 
 %\lstinputlisting[caption={総和. }, label=summation]{source/2/Summation.f90}
 
-\subsection{グラフ描画}
+\section{グラフ描画}
 以上の例では、計算された値が画面に出力されるだけなので、その計算結果の様子がつかみにくい。
 計算結果を直感的に理解するには、グラフ化することが効果的である。
 
@@ -262,15 +262,26 @@ a_{k+2} &=& a_{k+1} + a_k
 	\item 結果が格納されたファイルを読み取り、その結果をグラフ化する。
 \end{enumerate}
 
-\subsubsection*{ファイル出力}
+\subsection*{ファイル出力}
 [ファイル出力の説明]
 
-\subsubsection*{グラフ描画入門}
+\subsection*{グラフ描画入門}
 [グラフ描画の説明]
 
+\subsection*{$<$演習課題$>$}
+関数$f(k) = k!$について、$k=1,2, \cdots, 20$をプロットせよ。\\
+なお$k!$は、以下の階乗を表す。
+\begin{eqnarray}
+k! = \prod_{n=1}^{k} n
+\end{eqnarray}
 
 
-\subsection{条件分岐}
+
+\subsection{Lorenzアトラクタ}
+
+
+
+\section{条件分岐}
 if文を使えば, 条件に応じて処理を分岐することができる. 
 以下は, 実数xを読み込み, もしもその符号が負であれば, 
 符号を反転する(すなわち絶対値を計算する)プログラムである. 
@@ -297,11 +308,11 @@ if文の括弧の中には以下の表のように, 適当な等式, あるい�
 以下は二次方程式の判別式を計算して, それが正, 零, 負であるときにそれぞれ異なる処理をするプログラムである. 
 \lstinputlisting[caption={判別式による二次方程式の解の判定. }, label=ifstatement2]{source/2/IfStatement2.f90}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 二次方程式の判別式を計算し, それが正のときは二実数解, 
 零のときは重解, 負のときは複素数解を計算するプログラムを作成せよ. 
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 自然対数の底$e$の近似値を以下に示す二つの数列を用いて計算せよ. 
 $n=1, 2, \cdots$と大きくしていき, 真値へと漸近する様子を確認せよ.
 また, 真値との相対誤差が$10^{-10}$以下になったときにプログラムを停止するようにせよ. 
@@ -317,15 +328,15 @@ b_n=\sum_{m=0}^{n}\frac{1}{m!}
 %\end{equation}
 
 
-\subsection{配列}
+\section{配列}
 \lstinputlisting[caption={ベクトルの内積. }, label=dotproduct]{source/3/Subroutine0.f90}
 
 \lstinputlisting[caption={行列の和. }, label=matrixsum]{source/3/MatrixSum.f90}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 適当な数列を読み込み, その平均値と標準偏差を計算するプログラムを作成せよ. 
 
-\subsection{サブルーチン}
+\section{サブルーチン}
 ソースコード\ref{dotproduct}のうち, 
 内積計算のように汎用性のある部分は独立した副プログラム(サブルーチン)として分けて記述するのがよい. 
 以下にサブルーチンDotProductとそれを呼び出すメインプログラムの例を示す. 
@@ -335,7 +346,7 @@ b_n=\sum_{m=0}^{n}\frac{1}{m!}
 数千, 数万行にも及ぶ長いプログラムを作成する場合にはサブルーチン化は必須の技術となる. 
 
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 三次元ベクトル$\bm{a}, \bm{b}$の成分を入力し, それらの外積
 \begin{equation}
 \begin{pmatrix}
@@ -354,7 +365,7 @@ a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2-a_2b_1
 外積の計算部分はサブルーチン化せよ. 
 %\lstinputlisting[caption={繰り返し処理. }, label=doloop]{source/3/CrossProduct.f90}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 三次元ベクトル$\bm{a}, \bm{b}, \bm{c}$の成分を入力し, ベクトル三重積
 \begin{equation}
 (\bm{a} \times \bm{b}) \times \bm{c}
@@ -372,7 +383,7 @@ a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2-a_2b_1
 %\lstinputlisting[caption={繰り返し処理. }, label=doloop]{source/3/MatrixProduct.f90}
 
 
-\subsection*{その他書きたいこと}
+\section*{その他書きたいこと}
 \begin{enumerate}
 \item parameter文
 \item exit文(doループを抜けるとき)
@@ -382,15 +393,15 @@ a_2b_3-a_3b_2 \\ a_3b_1-a_1b_3 \\ a_1b_2-a_2b_1
 \item gnuplotで絵が描けるような課題を増やしたい
 \end{enumerate}
 
-\section{数値計算への応用}
-\subsection{漸化式}
+\chapter{数値計算への応用}
+\section{漸化式}
 \begin{enumerate}
 \item 等差数列
 \item 階差数列
 \end{enumerate}
 など簡単な漸化式のサンプルプログラムと演習問題. 
 
-\subsection{Mandelbrot集合}
+\section{Mandelbrot集合}
 Mandelbrot集合とは, 
 \begin{equation}
 z_{n+1}=z_n^2+c, \ \ \ z_0=0
@@ -408,7 +419,7 @@ $|z_n|>2$のとき, $|z_{n+1}/z_n|>1$となることが示されるので(証明
 \caption{Mandelbrot集合. }
 \end{figure}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 \begin{enumerate}
 \item 複素数$c$を与え, $|z_N|>2$を満たす最初の$N$を出力するプログラムを作成せよ. 
 \item 上のプログラムを改造して, $-2 \le \Re[c] \le 1, -1.5 \le \Im[c] \le 1.5$の範囲における$N$をファイルに出力せよ. 
@@ -416,7 +427,7 @@ $|z_n|>2$のとき, $|z_{n+1}/z_n|>1$となることが示されるので(証明
 \item 図形の一部を解像度を上げて再計算し, Mandelbrot集合がフラクタルであることを確かめよ. 
 \end{enumerate}
 
-\subsection{常微分方程式}
+\section{常微分方程式}
 一階の微分方程式
 \begin{equation}
 \frac{dx}{dt}=f(x,t)
@@ -454,11 +465,11 @@ x(t)=\exp(at)
 
 \lstinputlisting[caption={Euler法. }, label=eulermethod]{source/5/EulerMethod.f90}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 ここに, Euler法の適当な演習課題を一つ追加. 
 $\Delta t$を変えたらどうなるか確かめてみる. 
 
-\subsection{Lorenz方程式}
+\section{Lorenz方程式}
 気象学者のLorenzは1963年に熱対流の近似モデルとして
 以下の方程式を提案した(Lorenz方程式). 
 \begin{equation}
@@ -483,7 +494,7 @@ $\mu >1$のとき, 解$x=y=\pm \sqrt{b(\mu-1)}, z=\mu-1$をもつ.
 \caption{Lorenzアトラクター. }
 \end{figure}
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 \begin{enumerate}
 \item $a=10, b=8/3$と固定した上で, Lorenz方程式のシミュレーションを実施せよ. 
 $\mu$を徐々に増加させ, どのような解が現れるか調べよ. 
@@ -492,7 +503,7 @@ $\mu$を徐々に増加させ, どのような解が現れるか調べよ.
 \end{enumerate}
 
 
-\subsection{運動方程式}
+\section{運動方程式}
 質点の自由落下をシミュレーションする. 
 質点の質量を$m$, 重力加速度を$g$, 初期位置を$h$, 初速を$u_0$とする. 
 鉛直座標として$x$をとると, 運動方程式は
@@ -548,7 +559,7 @@ D_y=\frac{dy/dt}{\sqrt{(dx/dt)^2+(dy/dt)^2}}D=\frac{1}{2}\rho \pi a^2 C_D\sqrt{\
 となる. 
 
 \if0 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Reynolds数が小さい場合}
+\subsection{Reynolds数が小さい場合}
 $Re<0.1$のとき, 抗力係数は理論的に
 \begin{equation}
 C_D=\frac{24}{Re}
@@ -592,7 +603,7 @@ Reynolds数$Re$[-] & $\frac{2aU}{\nu}$ & 計算する \\ \hline
 \end{table}
 \fi %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 \begin{enumerate}
 \item 空気抵抗がない場合($C_D=0$)のシミュレーションをおこない, 解析解と比較せよ. 
 \item 空気抵抗がある場合のシミュレーションをおこない, 空気抵抗がない場合と比較せよ. 
@@ -621,11 +632,11 @@ Reynolds数$Re$[-] & - & $2aU/\nu$ \\ \hline
 
 
 
-\subsection{素数探索}
+\section{素数探索}
 素数とは1と自分以外に約数をもたない自然数のことである. 
 計算機を用いて数多くの素数を求めてみよう. 
 
-\subsubsection*{$<$演習課題$>$}
+\subsection*{$<$演習課題$>$}
 \begin{enumerate}
 \item 適当な自然数$n$を与え, $2$から$n-1$までの自然数で割り算をおこなうことで
 $n$が素数かどうかを判定するプログラムを作成せよ. 
@@ -639,8 +650,8 @@ $n$が素数かどうかを判定するプログラムを作成せよ.
 \lstinputlisting[caption={実行時間の測定. }, label=timing]{source/7/Timing.f90}
 
 
-\section{科学技術プレゼンテーション}
-\subsubsection*{$<$演習課題$>$}
+\chapter{科学技術プレゼンテーション}
+\subsection*{$<$演習課題$>$}
 これまでに取り組んだ数値計算課題(Mandelbrot集合, Lorenz方程式, 斜方投射, 素数探索)
 の中から一つテーマを選び, その内容を説明するスライドをPowerPointを用いて作成せよ. 
 スライドには以下の内容を含めること. 
@@ -654,7 +665,7 @@ $n$が素数かどうかを判定するプログラムを作成せよ.
 \end{enumerate}
 
 \appendix
-\section{gfortranのインストール}
+\chapter{gfortranのインストール}
 gfortranはフリーのコンパイラであるから, 
 自分のもっているノートPCや家にあるPCにインストールしておくのがよい. 
 その手順を以下に記す. 
@@ -695,18 +706,18 @@ C:Y\llap{=}Program FilesY\llap{=}mingw-w64Y\llap{=}x86\_64-6.1.0-posix-seh-rt\_v
 
 \clearpage
 
-\section{回答例}
+\chapter{回答例}
 
-\subsection{Mandelbrot集合}
+\section{Mandelbrot集合}
 \lstinputlisting[caption={Mandelbrot集合のプログラム. }, label=mandelbrot_sol]{source/4/Mandelbrot.f90}
 
-\subsection{Lorenz方程式}
+\section{Lorenz方程式}
 \lstinputlisting[caption={Lorenz方程式のEuler法によって解くプログラム. }, label=lorenz_sol]{source/5/Lorenz.f90}
 
-\subsection{斜方投射}
+\section{斜方投射}
 \lstinputlisting[caption={斜方投射のシミュレーションプログラム. }, label=shahou_sol]{source/6/Shahou.f90}
 
-\subsection{素数探索}
+\section{素数探索}
 \lstinputlisting[caption={素数探索プログラム(簡易版). }, label=prime_sol]{source/7/Prime.f90}
 \lstinputlisting[caption={素数探索プログラム(高速版). }, label=primefast_sol]{source/7/PrimeFast.f90}
 
