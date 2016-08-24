@@ -3,3 +3,5 @@
 *.dvi
 *.aux
 *.synctex.gz
+*.fls
+*.fdb_latexmk
