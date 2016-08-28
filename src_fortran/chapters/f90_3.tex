@@ -1,0 +1,55 @@
+\chapter{Fortran90の基礎３〜プログラムフローの構成〜}
+この章では、``条件分岐"という枠組みを学習する。
+各シーンでの計算内容をコンピュータに判断させることにより、
+より複雑な数値計算を行わせることができる。
+
+\section{条件分岐}
+{\ttfamily if}文を使えば, 条件に応じて処理を分岐することができる.
+以下は, 実数xを読み込み, もしもその符号が負であれば,
+符号を反転する(すなわち絶対値を計算する)プログラムである.
+\lstinputlisting[caption={if文の例. }, label=ifstatement1]{source/2/IfStatement1.f90}
+{\ttfamily if}文の括弧の中には以下の表のように, 適当な等式, あるいは不等式を書く.
+
+\begin{table}[h]
+  \caption{等式, 不等式の書き方. }
+  \begin{center}
+    \begin{tabular}{ccc}
+      \hline
+      Fortranでの書き方   & \multicolumn{2}{c}{意味} \\ \hline
+      x $==$ y   & x $=$ y &(イコール)\\
+      x $/=$ y   & x $\ne$ y &(ノットイコール)\\
+      x $<$ y   & x $<$ y &(小なり)\\
+      x $<=$ y  & x $\le$ y &(小なりイコール)\\
+      x $>$ y  & x $<$ y &(大なり)\\
+      x $>=$ y   & x $\ge$ y &(大なりイコール)\\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+以下は二次方程式の判別式を計算して, それが正, 零, 負であるときにそれぞれ異なる処理をするプログラムである.
+\lstinputlisting[caption={判別式による二次方程式の解の判定. }, label=ifstatement2]{source/2/IfStatement2.f90}
+
+\subsection*{$<$演習課題$>$}
+二次方程式の判別式を計算し, それが正のときは二実数解,
+零のときは重解, 負のときは複素数解を計算するプログラムを作成せよ.
+
+\subsection*{$<$演習課題$>$}
+自然対数の底$e$の近似値を以下に示す二つの数列を用いて計算せよ.
+$n=1, 2, \cdots$と大きくしていき, 真値へと漸近する様子を確認せよ.
+また, 真値との相対誤差が$10^{-10}$以下になったときにプログラムを停止するようにせよ.
+\begin{equation}
+a_n= \Big( 1+\frac{1}{n}\Big)^n
+\end{equation}
+\begin{equation}
+b_n=\sum_{m=0}^{n}\frac{1}{m!}
+\end{equation}
+
+以下に、ソースコードの一部をヒントとして示す。必要であれば参考にして良い。
+%TODO a_n を求めるコードのヒントを追加する。
+
+%\begin{equation}
+%e=\lim_{n\to \infty} a_n = \lim_{n\to \infty} b_n.
+%\end{equation}
+
+%TODO もっと演習課題を追加する。
